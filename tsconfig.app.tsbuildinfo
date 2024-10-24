@@ -1,0 +1,1 @@
+{"root":["./src/App.tsx","./src/main.tsx","./src/vite-env.d.ts","./src/components/Footer/FooterComponent.tsx","./src/components/Loading/LoadingComponent.tsx","./src/hooks/useAxios.ts"],"version":"5.6.3"}
