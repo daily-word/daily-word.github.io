@@ -35,9 +35,6 @@ function App() {
                   <span className='material-icons-outlined mr-1 align-sub text-primary'>turned_in</span>{meaning}
                 </li>
               ))}
-              <li className='text-dark text-lg mb-4 last:mb-0'>
-                <span className='material-icons-outlined mr-1 align-sub text-primary'>turned_in</span>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eos sed, saepe, placeat sequi, amet ratione aspernatur doloribus voluptatem dolore voluptate ea earum ipsam unde enim consequatur blanditiis dicta veniam eius?
-              </li>
             </ul>
           </div>
         </div>
