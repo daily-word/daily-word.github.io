@@ -12,7 +12,7 @@ type ResponseWordOfTheDay = {
 }
 
 function App() {
-  const { data, loading, error } = useAxios<ResponseWordOfTheDay>('http://152.70.213.3:8081/today');
+  const { data, loading, error } = useAxios<ResponseWordOfTheDay>('https://daily-word.ddns.net/today');
 
   if (loading) return <LoadingComponent />;
   if (error) return <p>I'm sorry. We are going through problems. Please try again in a few minutes: {error}</p>;
@@ -23,7 +23,7 @@ function App() {
         <div className='bg-primary text-white py-7'>
           <div className='container mx-auto'>
             <h3 className='text-5xl sm:text-7xl text-center font-semibold capitalize'>{data.word}</h3>
-            <h1 className='text-center text-base text-secondary'>Word Of the Day</h1>
+            <h1 className='text-center text-base text-secondary'>Daily Word</h1>
           </div>
         </div>
         <div className='flex justify-center container mx-auto sm:px-0 px-4 w-full md:w-[650px] lg:w-[750px] xl:w-[800px]'>
