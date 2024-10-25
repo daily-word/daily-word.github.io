@@ -5,10 +5,15 @@ import { FooterComponent } from './components/Footer/FooterComponent';
 type ResponseWordOfTheDay = {
   "_id": string,
   "word": string,
-  "meanings": string[],
+  "meanings": Meanings[],
   "createdAt": Date,
   "deletedAt": Date | null,
   "wordOfTheDayAt": Date
+}
+
+type Meanings = {
+  meaning: string;
+  example: string;
 }
 
 function App() {
@@ -31,8 +36,13 @@ function App() {
             <h4 className='text-3xl text-white bg-primary p-7 rounded-t-lg'>Meanings</h4>
             <ul className='p-7'>
               {data.meanings.map((meaning) => (
-                <li className='text-dark text-lg mb-4 last:mb-0' key={meaning}>
-                  <span className='material-icons-outlined mr-1 align-sub text-primary'>turned_in</span>{meaning}
+                <li className='text-dark text-lg mb-4 last:mb-0' key={meaning.meaning}>
+                  <p>
+                    <span className='material-icons-outlined mr-1 align-sub text-primary'>turned_in</span>{meaning.meaning}
+                  </p>
+                  <p className='text-sm italic font-light'>
+                    "{meaning.example}""
+                  </p>
                 </li>
               ))}
             </ul>
